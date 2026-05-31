@@ -5,7 +5,7 @@ import ProjectCard from '../components/ProjectCard';
 import CTASection from '../components/CTASection';
 import { projects } from '../data/projects';
 
-const categories = ['All', 'Residential', 'Commercial', 'School', 'Hospital', 'NGO'];
+const categories = ['All'];
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -143,30 +143,30 @@ export default function Projects() {
 
                 {/* IMAGE (NEW ONLINE IMAGE LOGIC) */}
                 <div className="relative h-56 overflow-hidden bg-slate-50">
-                  <img
-                    src={
-                      // New Category: Irrigation Solars (Solar panels in farm)
-                      item.category === "Irrigation Solars"
-                        ? "https://media.gettyimages.com/id/1485176366/photo/ripan-deb-a-37-year-old-farmer-putting-water-to-his-field-through-a-solar-powered-water-pump.jpg?s=612x612&w=gi&k=20&c=QKU_Mm1h7qKslrKr_1GP-7P2-ElywzoUXJ6O5lGpA6Q="
+               <img
+  src={
+    // Home systems (residential solar)
+    item.category === "Home System"
+      ? item.image
 
-                        // Water Pumps (Industrial pump)
-                        : item.category === "Water Pumps"
-                        ? "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=1200&q=80"
+    // Farm / Agriculture systems
+    : item.category === "Agriculture"
+      ? item.image
 
-                        // Batteries (Varied battery types)
-                        : item.category === "Batteries"
-                        ? "https://images.unsplash.com/photo-1619641805634-b867f535071c?fm=jpg&q=60&w=3000&auto=format&fit=crop"
+    // Commercial / Irrigation business systems
+    : item.category === "Commercial"
+      ? item.image
 
-                        // Solar Systems (Standard large array)
-                        : item.category === "Solar Systems"
-                        ? "https://images.unsplash.com/photo-1509391366360-2e959784a276?fm=jpg&q=60&w=3000&auto=format&fit=crop"
+    // Water pumps
+    : item.category === "Water pumps"
+      ? item.image
 
-                        // Default / Fallback for Solar
-                        : "https://images.unsplash.com/photo-1509391366360-2e959784a276?fm=jpg&q=60&w=3000&auto=format&fit=crop"
-                    }
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition duration-700"
-                  />
+    // fallback
+    : item.image || image14
+  }
+  alt={item.title}
+  className="w-full h-full object-cover group-hover:scale-105 transition duration-700"
+/>
 
                   {/* energy overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 via-transparent to-transparent" />

@@ -1,3 +1,10 @@
+import image10 from "../image/sleek_modern_advertisement_style_product_photo_of_solar_batteries_and_inverters.png";
+import logoo from '../image/Copilot_20260531_120149.png';
+import image11 from"../image/Copilot_20260531_134948.png";
+import image12 from "../image/Copilot_20260531_135958.png";
+
+
+
 export const services = [
   {
     id: "solar-installation",
@@ -5,7 +12,7 @@ export const services = [
     description:
       "High-quality residential and commercial solar installation across Kenya.",
     image:
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276",
+      image11,
     details:
       "We handle full solar installation including site survey, system design, installation, and maintenance for homes and businesses.",
   },
@@ -25,7 +32,7 @@ export const services = [
     description:
       "Reliable backup power systems for uninterrupted electricity supply.",
     image:
-      "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7",
+      image10,
     details:
       "We supply and install high-quality lithium batteries and inverters.",
   },
@@ -35,7 +42,7 @@ export const services = [
     description:
       "Large-scale solar systems for businesses, schools, and hospitals.",
     image:
-      "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1",
+      image12,
     details:
       "Reduce operational costs with scalable commercial solar solutions.",
   },
@@ -55,7 +62,7 @@ export const services = [
     description:
       "Professional solar planning and energy audits.",
     image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
+      logoo,
     details:
       "We help you choose the best solar solution based on your needs and budget.",
   },

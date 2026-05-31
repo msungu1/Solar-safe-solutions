@@ -13,6 +13,8 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ArrowRight, Zap, TrendingUp, Users, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import logoo from '../image/Copilot_20260531_120149.png';
+
 
 const stats = [
   { icon: Zap, value: 10, label: 'Installations', suffix: '+' },
@@ -127,7 +129,7 @@ export default function Home() {
         </p>
 
         <p className="text-lg text-slate-500 mb-10 leading-relaxed">
-          With over 500 successful installations and a 98% customer satisfaction rate, we've helped thousands of Kenyans reduce electricity costs and transition to clean energy.
+          With over 15 successful installations and a 98% customer satisfaction rate, we've helped thousands of Kenyans reduce electricity costs and transition to clean energy.
         </p>
 
         <Link to="/about">
@@ -150,7 +152,7 @@ export default function Home() {
 
         {/* REAL SOLAR IMAGE */}
         <img
-          src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=1400&q=80"
+          src={logoo}
           alt="Solar Panels Installation"
           className="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-700"
         />
@@ -164,7 +166,7 @@ export default function Home() {
         {/* Floating badge */}
         <div className="absolute bottom-6 left-6 px-4 py-2 rounded-full bg-white/80 backdrop-blur-md border border-blue-100">
           <p className="text-xs text-blue-700 font-medium tracking-widest">
-            500+ Installations Across Kenya
+            15 Installations Across Kenya
           </p>
         </div>
 
@@ -252,7 +254,7 @@ export default function Home() {
 
       {/* small trust note */}
       <p className="mt-5 text-sm text-slate-500">
-        Trusted by 500+ installations across Kenya
+        Trusted by 15+ installations across Kenya
       </p>
 
     </motion.div>
@@ -349,200 +351,238 @@ export default function Home() {
 
      
 
-    <section className="relative section-padding overflow-hidden bg-gradient-to-b from-white via-blue-50 to-white">
+   <section className="relative section-padding overflow-hidden bg-gradient-to-b from-white via-blue-50 to-white">
 
-  {/* Ambient energy glow */}
+  {/* Ambient Glow */}
   <div className="absolute inset-0">
-    <div className="absolute top-[-220px] left-[-220px] w-[600px] h-[600px] bg-blue-200/40 blur-[170px]" />
-    <div className="absolute bottom-[-220px] right-[-220px] w-[600px] h-[600px] bg-sky-300/30 blur-[170px]" />
+    <div className="absolute top-[-220px] left-[-220px] w-[600px] h-[600px] bg-blue-200/40 blur-[180px]" />
+    <div className="absolute bottom-[-220px] right-[-220px] w-[600px] h-[600px] bg-sky-300/30 blur-[180px]" />
   </div>
 
-  {/* subtle grid */}
-  <div className="absolute inset-0 opacity-[0.035] [mask-image:radial-gradient(ellipse_at_center,black,transparent)]">
-    <div className="h-full w-full bg-[linear-gradient(to_right,#3b82f610_1px,transparent_1px),linear-gradient(to_bottom,#3b82f610_1px,transparent_1px)] bg-[size:55px_55px]" />
-  </div>
+  <div className="container mx-auto px-4 relative z-10">
 
-  <div className="container mx-auto px-4 max-w-3xl relative z-10">
-
-    {/* HEADER */}
+    {/* Header */}
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}
       viewport={{ once: true }}
-      className="text-center mb-14"
+      className="text-center mb-20"
     >
-
-      <div className="inline-flex items-center px-6 py-2 mb-6 rounded-full bg-white border border-blue-100 shadow-sm backdrop-blur-md">
+      <div className="inline-flex items-center px-6 py-2 mb-6 rounded-full bg-white border border-blue-100 shadow-sm">
         <span className="text-xs tracking-[0.3em] uppercase text-blue-600 font-semibold">
-          Savings Engine
+          Why Solar Energy
         </span>
       </div>
 
-      <h2 className="text-4xl md:text-6xl font-extrabold text-slate-900 mb-5 leading-tight">
-        Solar Savings Calculator
+      <h2 className="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6">
+        Why Switch To Solar?
       </h2>
 
-      <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto">
-        Discover your potential savings and system size with clean energy insights tailored for Kenya.
+      <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
+        Solar energy gives you lower electricity costs, greater energy
+        independence, and a cleaner future for your home or business.
       </p>
-
     </motion.div>
 
-    {/* MAIN CARD */}
+    {/* Benefits Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      {[
+        {
+          icon: "💰",
+          title: "Reduce Energy Bills",
+          desc: "Cut electricity expenses and protect yourself from rising utility costs."
+        },
+        {
+          icon: "🔋",
+          title: "Reliable Backup Power",
+          desc: "Stay powered during outages with solar batteries and hybrid systems."
+        },
+        {
+          icon: "🌍",
+          title: "Clean Renewable Energy",
+          desc: "Reduce your carbon footprint and support a sustainable future."
+        },
+        {
+          icon: "📈",
+          title: "Increase Property Value",
+          desc: "Solar-equipped properties are more attractive and valuable."
+        }
+      ].map((item, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: index * 0.1 }}
+          viewport={{ once: true }}
+          className="group p-8 rounded-3xl bg-white/80 backdrop-blur-md border border-blue-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+        >
+          <div className="text-5xl mb-5">
+            {item.icon}
+          </div>
+
+          <h3 className="text-xl font-bold text-slate-900 mb-3">
+            {item.title}
+          </h3>
+
+          <p className="text-slate-600 leading-relaxed">
+            {item.desc}
+          </p>
+        </motion.div>
+      ))}
+    </div>
+
+    {/* Bottom Banner */}
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="relative p-10 rounded-[28px] bg-white/80 border border-blue-100 backdrop-blur-xl shadow-xl"
+      className="mt-16"
     >
+      <div className="rounded-3xl bg-gradient-to-r from-blue-600 to-sky-500 p-10 text-center text-white shadow-2xl">
+        <h3 className="text-3xl md:text-4xl font-bold mb-4">
+          Start Saving With Solar Today
+        </h3>
 
-      {/* top glow accent */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-[2px] bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-60" />
+        <p className="text-blue-100 max-w-2xl mx-auto mb-8">
+          Join homeowners and businesses across Kenya who are already
+          enjoying reliable, affordable clean energy.
+        </p>
 
-      <div className="space-y-10">
-
-        {/* BILL INPUT */}
-        <div>
-          <label className="block text-sm font-semibold text-slate-700 mb-3">
-            Monthly Electricity Bill
-          </label>
-
-          <Input
-            type="number"
-            value={calculatorData.monthlyBill}
-            onChange={(e) =>
-              setCalculatorData({
-                ...calculatorData,
-                monthlyBill: Number(e.target.value)
-              })
-            }
-            className="w-full text-lg py-6 px-5 rounded-2xl border border-blue-100 bg-white shadow-sm focus:border-blue-400 focus:ring-2 focus:ring-blue-100 transition-all"
-            min="1000"
-            step="1000"
-          />
-        </div>
-
-        {/* PROPERTY TYPE */}
-        <div>
-          <label className="block text-sm font-semibold text-slate-700 mb-3">
-            Property Type
-          </label>
-
-          <div className="grid grid-cols-3 gap-3">
-            {['residential', 'commercial', 'industrial'].map((type) => (
-              <button
-                key={type}
-                onClick={() =>
-                  setCalculatorData({ ...calculatorData, propertyType: type })
-                }
-                className={`py-3 px-4 rounded-2xl font-semibold transition-all border ${
-                  calculatorData.propertyType === type
-                    ? 'bg-blue-600 text-white border-blue-600 shadow-lg scale-[1.02]'
-                    : 'bg-white text-slate-700 border-blue-100 hover:bg-blue-50'
-                }`}
-              >
-                {type.charAt(0).toUpperCase() + type.slice(1)}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* ENERGY USAGE */}
-        <div>
-          <label className="block text-sm font-semibold text-slate-700 mb-3">
-            Energy Usage
-          </label>
-
-          <div className="grid grid-cols-3 gap-3">
-            {['low', 'medium', 'high'].map((usage) => (
-              <button
-                key={usage}
-                onClick={() =>
-                  setCalculatorData({ ...calculatorData, usage })
-                }
-                className={`py-3 px-4 rounded-2xl font-semibold transition-all border ${
-                  calculatorData.usage === usage
-                    ? 'bg-sky-500 text-white border-sky-500 shadow-lg scale-[1.02]'
-                    : 'bg-white text-slate-700 border-blue-100 hover:bg-blue-50'
-                }`}
-              >
-                {usage.charAt(0).toUpperCase() + usage.slice(1)}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* RESULTS DASHBOARD */}
-        <div className="pt-10 border-t border-blue-100 grid grid-cols-1 md:grid-cols-3 gap-6">
-
-          <div className="text-center p-5 rounded-2xl bg-blue-50/60 border border-blue-100">
-            <p className="text-slate-500 text-sm mb-2">System Size</p>
-            <p className="text-3xl font-extrabold text-slate-900">
-              {results.systemSize} kW
-            </p>
-          </div>
-
-          <div className="text-center p-5 rounded-2xl bg-white border border-blue-100 shadow-sm">
-            <p className="text-slate-500 text-sm mb-2">Annual Savings</p>
-            <p className="text-3xl font-extrabold text-blue-600">
-              {(results.annualSavings / 1000000).toFixed(1)}M
-            </p>
-          </div>
-
-          <div className="text-center p-5 rounded-2xl bg-sky-50/60 border border-blue-100">
-            <p className="text-slate-500 text-sm mb-2">Payback Period</p>
-            <p className="text-3xl font-extrabold text-sky-600">
-              {results.roi} years
-            </p>
-          </div>
-
-        </div>
-
+        <Link to="/contact">
+          <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-8 py-6 font-semibold">
+            Request Free Consultation
+          </Button>
+        </Link>
       </div>
     </motion.div>
 
   </div>
 </section>
 
-      <section className="section-padding bg-gradient-to-b from-white to-blue-50 dark:from-slate-900 dark:to-slate-800">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Featured Projects</h2>
-            <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-              See real-world examples of our successful installations
-            </p>
-          </motion.div>
+    <section className="section-padding bg-gradient-to-b from-white via-blue-50 to-white">
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {projects.slice(0, 6).map((project, index) => (
-              <ProjectCard key={project.id} project={project} index={index} />
-            ))}
+  <div className="container mx-auto px-4">
+
+    {/* HEADER */}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="text-center mb-16"
+    >
+      <span className="inline-flex px-5 py-2 mb-6 rounded-full bg-white border border-blue-100">
+        <span className="text-xs tracking-[0.3em] uppercase text-blue-600 font-semibold">
+          Success Stories
+        </span>
+      </span>
+
+      <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">
+        Featured Solar Installations
+      </h2>
+
+      <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+        Real projects delivering clean energy, lower costs, and energy independence across Kenya.
+      </p>
+    </motion.div>
+
+    {/* CASE STUDIES */}
+    <div className="space-y-16">
+
+      {projects.slice(0, 3).map((project, index) => (
+        <motion.div
+          key={project.id}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: index * 0.1 }}
+          viewport={{ once: true }}
+          className={`grid grid-cols-1 lg:grid-cols-2 gap-10 items-center ${
+            index % 2 === 1 ? 'lg:grid-flow-dense' : ''
+          }`}
+        >
+
+          {/* IMAGE */}
+          <div className="relative h-[350px] rounded-3xl overflow-hidden shadow-xl">
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-full object-cover hover:scale-110 transition duration-700"
+            />
+
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+
+            <div className="absolute bottom-5 left-5 text-white">
+              <p className="text-sm text-blue-300 uppercase tracking-wider">
+                {project.category || "Solar Project"}
+              </p>
+              <h3 className="text-xl font-bold">
+                {project.title}
+              </h3>
+            </div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <Link to="/projects">
-              <Button className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-6 text-lg flex items-center gap-2 mx-auto">
-                View All Projects
-                <ArrowRight size={20} />
-              </Button>
-            </Link>
-          </motion.div>
-        </div>
-      </section>
+          {/* CONTENT */}
+          <div className="space-y-5">
+
+            <h3 className="text-3xl font-bold text-slate-900">
+              {project.title}
+            </h3>
+
+            <p className="text-slate-600 leading-relaxed">
+              {project.description ||
+                "A high-performance solar installation designed to reduce energy costs and provide reliable clean power."}
+            </p>
+
+            {/* HIGHLIGHTS */}
+            <div className="grid grid-cols-2 gap-4 mt-6">
+
+              <div className="p-4 rounded-2xl bg-blue-50 border border-blue-100">
+                <p className="text-sm text-slate-500">System Size</p>
+                <p className="text-xl font-bold text-slate-900">50kW+</p>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-white border border-blue-100">
+                <p className="text-sm text-slate-500">Savings</p>
+                <p className="text-xl font-bold text-blue-600">60–80%</p>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-white border border-blue-100">
+                <p className="text-sm text-slate-500">Location</p>
+                <p className="text-xl font-bold text-slate-900">Kenya</p>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-sky-50 border border-blue-100">
+                <p className="text-sm text-slate-500">Status</p>
+                <p className="text-xl font-bold text-sky-600">Completed</p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </motion.div>
+      ))}
+
+    </div>
+
+    {/* CTA */}
+    <div className="text-center mt-20">
+      <Link to="/projects">
+        <button className="px-10 py-5 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-semibold shadow-lg transition-all">
+          View All Projects
+        </button>
+      </Link>
+
+      <p className="text-sm text-slate-500 mt-4">
+        See how we’re powering homes and businesses across Kenya
+      </p>
+    </div>
+
+  </div>
+</section>
 
       <section className="section-padding">
         <div className="container mx-auto px-4">

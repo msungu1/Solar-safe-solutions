@@ -8,8 +8,6 @@ import Gallery from '../pages/Gallery';
 import Testimonials from '../pages/Testimonials';
 import FAQ from '../pages/FAQ';
 import Contact from '../pages/Contact';
-import Blog from '../pages/Blog';
-import BlogDetails from '../pages/BlogDetails';
 import MainLayout from '../layouts/MainLayout';
 
 export default function AppRoutes() {
@@ -25,8 +23,6 @@ export default function AppRoutes() {
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:slug" element={<BlogDetails />} />
         {/* <Route path="*" element={<NotFound />} /> */}
       </Route>
     </Routes>

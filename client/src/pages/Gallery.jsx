@@ -1,14 +1,30 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import CTASection from '../components/CTASection';
+import image1 from "../image/WhatsApp Image 2026-05-30 at 17.57.42 (1).jpeg";
+import image2 from "../image/WhatsApp Image 2026-05-30 at 17.57.36 (1).jpeg";
+import image3 from "../image/WhatsApp Image 2026-05-30 at 17.57.36.jpeg";
+import image4 from "../image/WhatsApp Image 2026-05-30 at 17.57.42.jpeg";
+import image5 from "../image/WhatsApp Image 2026-05-31 at 11.13.54.jpeg";
+import image6 from "../image/WhatsApp Image 2026-05-31 at 11.14.10.jpeg";
+import image7 from "../image/WhatsApp Image 2026-05-31 at 11.15.46.jpeg";
+import image8 from "../image/WhatsApp Image 2026-05-31 at 11.16.02.jpeg";
+import image9 from "../image/WhatsApp Image 2026-05-31 at 11.17.37.jpeg";
+import image10 from "../image/WhatsApp Image 2026-05-31 at 11.17.38.jpeg";
+
+
 
 const galleryImages = [
-  { id: 1, category: 'Installations', image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80', title: 'Solar Panel Installation' },
-  { id: 2, category: 'Technicians', image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&q=80', title: 'Expert Technicians' },
-  { id: 3, category: 'Residential', image: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80', title: 'Residential Solar' },
-  { id: 4, category: 'Commercial', image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80', title: 'Commercial System' },
-  { id: 5, category: 'Battery', image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&q=80', title: 'Battery Storage' },
-  { id: 6, category: 'Installations', image: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80', title: 'Installation Process' }
+  { id: 1, category: 'Installations', image:image1, title: 'Solar water pump' },
+  { id: 2, category: 'Technicians', image:image2, title: 'Expert Technicians' },
+  { id: 3, category: 'Commercial', image:image3, title: 'Installation Process' },
+  { id: 4, category: 'Commercial', image:image4, title: 'Commercial System' },
+  { id: 5, category: 'Residential', image:image5, title: 'Residential Solar' },
+  { id: 6, category: 'Installations', image: image6, title: 'Installation Process' },
+  { id: 7, category: 'Residential', image: image7, title: 'Residential Solar' },
+  { id: 8, category: 'Commercial', image: image8, title: 'Commercial System' },
+  { id: 9, category: 'Battery', image: image9, title: 'Battery Storage' },
+  { id: 10, category: 'Installations', image: image10, title: 'Installation Process' },
 ];
 
 export default function Gallery() {
