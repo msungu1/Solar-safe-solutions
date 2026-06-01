@@ -73,7 +73,6 @@ export default function Contact() {
 
                 {/* CARD */}
                 {[
-                  { icon: Phone, label: "Phone", value: "0702 256 347", href: "tel:+254702256347" },
                   { icon: Mail, label: "Email", value: "info@solarsafe.ke", href: "mailto:info@solarsafe.ke" },
                   { icon: MapPin, label: "Location", value: "Nairobi, Kenya" },
                   { icon: Clock, label: "Hours", value: "Mon–Fri: 8AM–6PM", sub: "Sat: 9AM–2PM" },

@@ -2,9 +2,16 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 export default function WhatsAppButton() {
+  const showButton = false; // Change to true when ready
+
+  if (!showButton) return null;
+
   const phoneNumber = '254702256347';
-  const message = 'Hello! I\'m interested in learning more about SolarSafe Solutions.';
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  const message =
+    "Hello! I'm interested in learning more about SolarSafe Solutions.";
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+    message
+  )}`;
 
   return (
     <motion.a

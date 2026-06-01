@@ -26,7 +26,7 @@ const stats = [
 const faqItems = [
   {
     question: 'How much does solar installation cost?',
-    answer: 'Solar installation costs vary based on system size and your property. A typical residential system ranges from 500,000 to 2,000,000 Naira. We offer financing options to make solar accessible.'
+    answer: 'Solar installation costs vary based on system size and your property. A typical residential system ranges from 50,000 to 2,000,000  kesh. We offer financing options to make solar accessible.'
   },
   {
     question: 'How long do solar batteries last?',
@@ -51,27 +51,10 @@ const faqItems = [
 ];
 
 export default function Home() {
-  const [calculatorData, setCalculatorData] = useState({
-    monthlyBill: 10000,
-    propertyType: 'residential',
-    usage: 'medium'
-  });
+  
 
-  const calculateSavings = () => {
-    const billMultiplier = calculatorData.monthlyBill / 10000;
-    const usageMultiplier = calculatorData.usage === 'low' ? 0.7 : calculatorData.usage === 'high' ? 1.3 : 1;
-    const systemSize = 3 * billMultiplier * usageMultiplier;
-    const annualSavings = calculatorData.monthlyBill * 12 * 0.75;
-    const roi = (systemSize * 1000000) / annualSavings;
+  
 
-    return {
-      systemSize: Math.round(systemSize * 10) / 10,
-      annualSavings: Math.round(annualSavings),
-      roi: Math.round(roi * 10) / 10
-    };
-  };
-
-  const results = calculateSavings();
 
   return (
     <div className="min-h-screen">

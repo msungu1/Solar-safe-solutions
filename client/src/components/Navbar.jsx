@@ -42,7 +42,7 @@ export default function Navbar() {
             href="tel:+254702256347"
             className="font-semibold hover:text-blue-200 transition"
           >
-            📞 Call Us: +254 702 256 347
+            solarsafe-solutions
           </a>
 
         </div>

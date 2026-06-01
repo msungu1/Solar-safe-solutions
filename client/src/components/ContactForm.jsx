@@ -68,7 +68,7 @@ export default function ContactForm() {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            placeholder="John Doe"
+            
             className="glass"
             required
           />
@@ -100,7 +100,7 @@ export default function ContactForm() {
           name="phone"
           value={formData.phone}
           onChange={handleChange}
-          placeholder="+254 702 256 347"
+          placeholder="+254 01234567"
           className="glass"
         />
       </div>
