@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { CheckCircle } from 'lucide-react';
 import CTASection from '../components/CTASection';
+import image16 from '../image/Copilot_20260531_120149.png';
 
 const coreValues = [
   { title: 'Innovation', description: 'Cutting-edge solar technology solutions.' },
@@ -113,7 +114,7 @@ export default function About() {
       </h2>
 
       <p className="text-slate-600 mb-5 leading-relaxed text-lg">
-        Founded in 2015, we set out to make solar energy accessible across Kenya.
+        Founded in 2025, we set out to make solar energy accessible across Kenya.
       </p>
 
       <p className="text-slate-600 mb-5 leading-relaxed text-lg">
@@ -135,7 +136,7 @@ export default function About() {
       <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/40">
 
         <img
-          src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1000&q=80"
+          src={image16}
           className="w-full h-[450px] object-cover scale-105 group-hover:scale-110 transition duration-700"
           alt="Solar installation"
         />
